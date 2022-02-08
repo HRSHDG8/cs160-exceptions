@@ -6,8 +6,12 @@ public class ConditionalBreakPoint {
 
         for(int i=0;i<data1.length;i++){
             String s = "Super : "+data1[i];
-
             System.out.println(s);
         }
+    }
+    
+    public static void main(String[] args) {
+    	ConditionalBreakPoint cb = new ConditionalBreakPoint();
+    	cb.breakOnConditionOnly();
     }
 }

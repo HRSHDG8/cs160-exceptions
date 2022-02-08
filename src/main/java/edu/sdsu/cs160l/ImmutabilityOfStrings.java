@@ -20,7 +20,7 @@ public class ImmutabilityOfStrings {
     }
 
     public void passAndManipulateString(){
-        String text = "Lets check if I can be changed by passing to another function";
+        String text = "A";
         String updatedText = iWillAttemptToChangeIncomingString(text);
 
         System.out.println("Your original text "+text);
@@ -28,7 +28,12 @@ public class ImmutabilityOfStrings {
     }
 
     private String iWillAttemptToChangeIncomingString(String text){
-        text = "New updated text";
+        text = "B";
         return text;
     }
+    
+    public static void main(String[] args) {
+    	ImmutabilityOfStrings ims = new ImmutabilityOfStrings();
+    	ims.passAndManipulateString();
+	}
 }
