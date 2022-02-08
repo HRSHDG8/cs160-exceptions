@@ -19,12 +19,12 @@ public class PerformanceOfStrings {
 
     public double concatenateStringBuilder(int num) {
 
-        //TODO initialize your StringBuilder here
-        StringBuilder s;
+        StringBuilder s = new StringBuilder();
         long timeBeforeExec = System.nanoTime();
 
-        //TODO Write your code here to loop over i to num and add "o" to string Builder
-
+        for(int i=0;i<num;i++){
+            s.append("o");
+        }
 
         long timeAfterExec = System.nanoTime();
 

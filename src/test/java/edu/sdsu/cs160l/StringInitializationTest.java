@@ -3,6 +3,9 @@ package edu.sdsu.cs160l;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class StringInitializationTest {
 
     String testString;
@@ -29,8 +32,7 @@ public class StringInitializationTest {
     public void create2StringWithSameValue() {
         String a = "hey";
         String b = "hey";
-
-        //TODO write a suitable test to check equality of these strings
+        assertEquals(a, b);
     }
 
     @Test
@@ -38,7 +40,7 @@ public class StringInitializationTest {
         String[] a = {"java", "c++", "javascript"};
         String[] b = {"java", "c++", "javascript"};
 
-        //TODO write a suitable test to check equality of these string arrays
+        assertArrayEquals(a, b);
 
     }
 
@@ -47,12 +49,8 @@ public class StringInitializationTest {
         String[] data1 = {"mz", "my", "my", "mx", "mz", "mx", "my", "mz"};
         String[] data2 = {"mz", "mz", "mz", "mx", "mx", "my", "my", "my"};
 
-        System.out.println(data1[0] == "mz");
-        System.out.println(data1[0] == data2[2]);
-        System.out.println(data1[0] == new String(data2[0]));
-
-        //TODO convert below prints to asserts
-        System.out.println(data1[0].equals(testString));
-        System.out.println(data1[0].equals(new String(testString)));
+        assertEquals(data1[0], "mz");
+        assertEquals(data1[0], data2[2]);
+        assertEquals(data1[0], new String(data2[0]));
     }
 }
