@@ -6,7 +6,7 @@ import edu.sdsu.cs160l.university.student.Student;
 // remove the false value returned and refer to SimpleCompScienceStudent for inspiration
 
 /**
- * Advanced student strategt is a student strategy
+ * Advanced student strategy is a student strategy
  * A student has
  * at least 3 course and
  * at least 1 course with 2xx level and
