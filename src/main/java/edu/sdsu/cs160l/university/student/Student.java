@@ -2,8 +2,8 @@ package edu.sdsu.cs160l.university.student;
 
 import edu.sdsu.cs160l.university.course.Course;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Student {
     private Long redId;
@@ -11,7 +11,7 @@ public abstract class Student {
     private Double gpa;
     private StudentLevel studentLevel;
     private StudentMajor studentMajor;
-    private final List<Course> coursesEnrolled;
+    private final Set<Course> coursesEnrolled;
 
     public Student(Long redId, String name, Double gpa, StudentLevel studentLevel, StudentMajor studentMajor) {
         this.redId = redId;
@@ -19,7 +19,7 @@ public abstract class Student {
         this.gpa = gpa;
         this.studentLevel = studentLevel;
         this.studentMajor = studentMajor;
-        this.coursesEnrolled = new ArrayList<>();
+        this.coursesEnrolled = new HashSet<>();
     }
 
     public Long getRedId() {
@@ -71,11 +71,11 @@ public abstract class Student {
         this.studentMajor = studentMajor;
     }
 
-    public void addCourse(Course course){
+    public void addCourse(Course course) {
         this.coursesEnrolled.add(course);
     }
 
-    public List<Course> getCoursesEnrolled() {
+    public Set<Course> getCoursesEnrolled() {
         return coursesEnrolled;
     }
 

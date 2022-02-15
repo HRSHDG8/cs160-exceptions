@@ -1,7 +1,7 @@
 package edu.sdsu.cs160l.university.student;
 
-public class UnderGraduateStudent extends Student {
-    public UnderGraduateStudent(Long redId, String name, Double gpa, StudentLevel studentLevel, StudentMajor studentMajor) {
+public class SDSUStudent extends Student {
+    public SDSUStudent(Long redId, String name, Double gpa, StudentLevel studentLevel, StudentMajor studentMajor) {
         super(redId, name, gpa, studentLevel, studentMajor);
     }
 

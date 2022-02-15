@@ -8,11 +8,14 @@ public class CourseFactory {
      */
     public static Course getCourse(String courseName){
         switch (courseName){
-            case "cs160":
+            //TODO add a case for cs150 course
+            case "CS150":
+                return new CS150();
+            case "CS160":
                 return new CS160();
-            case "cs210":
+            case "CS210":
                 return new CS210();
-            case "cs340":
+            case "CS340":
                 return new CS340();
             default:
                 throw new UnsupportedOperationException("No course of the name "+ courseName +" found.");
@@ -21,13 +24,13 @@ public class CourseFactory {
 
     public static Course getRecommendedCourseByLevel(StudentLevel level){
         switch (level){
-            case freshman:
+            case FRESHMAN:
                 return new CS150();
-            case sophomore:
+            case SOPHOMORE:
                 return new CS160();
-            case junior:
+            case JUNIOR:
                 return new CS210();
-            case senior:
+            case SENIOR:
                 return new CS340();
             default:
                 throw new UnsupportedOperationException("No course recommendation for level "+ level +" found.");
