@@ -23,7 +23,7 @@ public class Main {
         //do
         Student compliant = new TransferStudent(1L,"Transfer", 2.9, StudentLevel.FRESHMAN, StudentMajor.math);
 
-        //with teh complaint student you can
+        //with the complaint student you can
         Registrar registrar = new Registrar();
 
         registrar.enrollStudentToClass(compliant, new CS340());
