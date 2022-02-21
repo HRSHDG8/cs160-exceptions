@@ -8,11 +8,11 @@ import edu.sdsu.cs160l.university.student.StudentMajor;
 import edu.sdsu.cs160l.university.student.TransferStudent;
 
 /**
- * Your code has 2 Todos locate them and fix/implement them :) worth 7 points
- *
  * Remember design principle 1.
+ * Program to and interface and not an Implementation.
  *
- * Program to and interface and not an Implementation
+ * Design principle 2
+ * Prefer a has a relationship over is a relationship.
  */
 public class Main {
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class Main {
         Student compliant = new TransferStudent(1L,"Transfer", 2.9, StudentLevel.FRESHMAN, StudentMajor.math);
 
         //with the complaint student you can
-        Registrar registrar = new Registrar();
+        Registrar registrar = Registrar.getInstance();
 
         registrar.enrollStudentToClass(compliant, new CS340());
 

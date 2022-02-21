@@ -21,7 +21,7 @@ public class RegistrarTest {
 
     @BeforeEach
     public void init(){
-        testRegistrar = new Registrar();
+        testRegistrar = Registrar.getInstance();
         john = new SDSUStudent(1L, "John", 4.0, StudentLevel.FRESHMAN, StudentMajor.computersci);
         jane = new SDSUStudent(2L, "Jane", 4.0, StudentLevel.JUNIOR, StudentMajor.computereng);
         jack = new TransferStudent(3L, "Jack", 4.0, StudentLevel.FRESHMAN, StudentMajor.computersci);
