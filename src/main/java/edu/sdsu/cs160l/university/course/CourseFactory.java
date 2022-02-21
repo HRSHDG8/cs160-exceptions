@@ -9,7 +9,7 @@ public class CourseFactory {
     public static Course getCourse(String courseName){
         switch (courseName){
             case "CS150":
-                return new CS150();
+                return CS150.getInstance();
             case "CS160":
                 return new CS160();
             case "CS210":
@@ -24,7 +24,7 @@ public class CourseFactory {
     public static Course getRecommendedCourseByLevel(StudentLevel level){
         switch (level){
             case FRESHMAN:
-                return new CS150();
+                return CS150.getInstance();
             case SOPHOMORE:
                 return new CS160();
             case JUNIOR:

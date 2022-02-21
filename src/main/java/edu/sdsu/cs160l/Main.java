@@ -16,17 +16,6 @@ import edu.sdsu.cs160l.university.student.TransferStudent;
  */
 public class Main {
     public static void main(String[] args) {
-        //These are just sample code
-
-        //Dont
-        TransferStudent nonCompliant = new TransferStudent(1L,"Transfer", 2.9, StudentLevel.FRESHMAN, StudentMajor.math);
-        //do
-        Student compliant = new TransferStudent(1L,"Transfer", 2.9, StudentLevel.FRESHMAN, StudentMajor.math);
-
-        //with the complaint student you can
-        Registrar registrar = Registrar.getInstance();
-
-        registrar.enrollStudentToClass(compliant, new CS340());
 
     }
 }

@@ -7,6 +7,6 @@ public class TransferStudent extends Student {
 
     @Override
     public StudentType studentType() {
-        return StudentType.GRADUATE;
+        return StudentType.TRANSFER;
     }
 }

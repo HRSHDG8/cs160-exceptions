@@ -1,11 +1,12 @@
 package edu.sdsu.cs160l.university.student;
 
 import edu.sdsu.cs160l.university.course.Course;
+import edu.sdsu.cs160l.university.exam.ExamObserver;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Student {
+public abstract class Student implements ExamObserver {
     private Long redId;
     private String name;
     private Double gpa;
@@ -20,6 +21,11 @@ public abstract class Student {
         this.studentLevel = studentLevel;
         this.studentMajor = studentMajor;
         this.coursesEnrolled = new HashSet<>();
+    }
+
+    @Override
+    public void onResultPublished(String message){
+        System.out.println("Incoming message :: "+ message);
     }
 
     public Long getRedId() {

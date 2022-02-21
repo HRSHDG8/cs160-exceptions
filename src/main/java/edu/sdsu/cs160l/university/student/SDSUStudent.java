@@ -7,6 +7,6 @@ public class SDSUStudent extends Student {
 
     @Override
     public StudentType studentType() {
-        return StudentType.UNDER_GRAD;
+        return StudentType.SDSU;
     }
 }
