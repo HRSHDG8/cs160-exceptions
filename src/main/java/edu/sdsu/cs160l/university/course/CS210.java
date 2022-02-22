@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+//TODO make this singleton
 public class CS210 implements Course{
     @Override
     public String courseName() {

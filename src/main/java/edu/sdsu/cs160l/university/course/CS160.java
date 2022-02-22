@@ -1,7 +1,7 @@
 package edu.sdsu.cs160l.university.course;
 
 import java.util.*;
-
+//TODO make this singleton
 public class CS160 implements Course{
     @Override
     public String courseName() {

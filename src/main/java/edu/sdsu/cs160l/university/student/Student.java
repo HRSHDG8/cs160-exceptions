@@ -25,7 +25,7 @@ public abstract class Student implements ExamObserver {
 
     @Override
     public void onResultPublished(String message){
-        System.out.println("Incoming message :: "+ message);
+        System.out.println("Incoming message for "+this.name+" :: "+ message);
     }
 
     public Long getRedId() {
