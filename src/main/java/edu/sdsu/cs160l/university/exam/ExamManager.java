@@ -3,6 +3,12 @@ package edu.sdsu.cs160l.university.exam;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ *
+ * Our Exam manager is a publisher that publishes certain messages
+ * interested parties can subscribe to those and get notified of changes
+ *
+ */
 public class ExamManager {
     private final Set<ExamObserver> observers;
 
