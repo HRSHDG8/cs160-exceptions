@@ -10,6 +10,7 @@ public class Applicant {
     public Applicant(Long applicantId, String applicantName) {
         this.applicantId = applicantId;
         this.applicantName = applicantName;
+        this.applicantScore = 0.0f;
     }
 
     public Long getApplicantId() {
