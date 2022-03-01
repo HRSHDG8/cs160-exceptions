@@ -5,7 +5,18 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 //TODO make this singleton
-public class CS210 implements Course{
+public class CS210 extends Course{
+    private static CS210 CS_210;
+
+    private CS210() {
+    }
+
+    public static CS210 getInstance() {
+        if (CS_210 == null) {
+            CS_210 = new CS210();
+        }
+        return CS_210;
+    }
     @Override
     public String courseName() {
         return "CS210";

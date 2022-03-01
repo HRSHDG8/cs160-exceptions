@@ -11,11 +11,11 @@ public class CourseFactory {
             case "CS150":
                 return CS150.getInstance();
             case "CS160":
-                return new CS160();
+                return CS160.getInstance();
             case "CS210":
-                return new CS210();
+                return CS210.getInstance();
             case "CS340":
-                return new CS340();
+                return CS340.getInstance();
             default:
                 throw new UnsupportedOperationException("No course of the name "+ courseName +" found.");
         }
@@ -26,11 +26,11 @@ public class CourseFactory {
             case FRESHMAN:
                 return CS150.getInstance();
             case SOPHOMORE:
-                return new CS160();
+                return CS160.getInstance();
             case JUNIOR:
-                return new CS210();
+                return CS210.getInstance();
             case SENIOR:
-                return new CS340();
+                return CS340.getInstance();
             default:
                 throw new UnsupportedOperationException("No course recommendation for level "+ level +" found.");
         }

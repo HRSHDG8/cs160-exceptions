@@ -1,14 +1,23 @@
 package edu.sdsu.cs160l.university.course;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-public class CS150 implements Course{
-    private CS150(){}
+public class CS150 extends Course {
+    private static CS150 CS_150;
 
-    public static CS150 getInstance(){
-        //TODO implement a single
-        return null;
+    private CS150() {
     }
+
+    public static CS150 getInstance() {
+        if (CS_150 == null) {
+            CS_150 = new CS150();
+        }
+        return CS_150;
+    }
+
     @Override
     public String courseName() {
         return "CS150";
