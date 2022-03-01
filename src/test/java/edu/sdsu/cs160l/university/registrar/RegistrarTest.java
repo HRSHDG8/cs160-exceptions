@@ -48,9 +48,10 @@ public class RegistrarTest {
 
     @Test
     public void enrollStudentToAFullCourse() {
-        assertDoesNotThrow(() -> testRegistrar.enrollStudentToClass(jack, "CS210"));
-        assertDoesNotThrow(() -> testRegistrar.enrollStudentToClass(jane, "CS210"));
-        assertThrows(ClassFullException.class, () -> testRegistrar.enrollStudentToClass(janice, "CS210"));
+        assertDoesNotThrow(() -> testRegistrar.enrollStudentToClass(john, "CS160"));
+        assertDoesNotThrow(() -> testRegistrar.enrollStudentToClass(jack, "CS160"));
+        assertDoesNotThrow(() -> testRegistrar.enrollStudentToClass(jane, "CS160"));
+        assertThrows(ClassFullException.class, () -> testRegistrar.enrollStudentToClass(janice, "CS160"));
     }
 
 }
