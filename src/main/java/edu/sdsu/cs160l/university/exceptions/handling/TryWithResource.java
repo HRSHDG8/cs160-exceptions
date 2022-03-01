@@ -1,4 +1,4 @@
-package edu.sdsu.cs160l.university.handling;
+package edu.sdsu.cs160l.university.exceptions.handling;
 
 
 import edu.sdsu.cs160l.university.student.SDSUStudent;
