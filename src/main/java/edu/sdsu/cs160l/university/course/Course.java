@@ -13,7 +13,7 @@ import java.util.Set;
  * Each course should now limit the no of enrollments (3 in this case)
  */
 public abstract class Course {
-    private Set<Student> studentToBeEnrolled;
+    private final Set<Student> studentToBeEnrolled;
     private final static Integer CLASS_SIZE = 3;
 
     public Course() {
