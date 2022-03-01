@@ -1,7 +1,7 @@
 package edu.sdsu.cs160l.university.registrar;
 
-import edu.sdsu.cs160l.university.course.*;
-import edu.sdsu.cs160l.university.criteria.StudentStrategy;
+import edu.sdsu.cs160l.university.course.Course;
+import edu.sdsu.cs160l.university.course.CourseFactory;
 import edu.sdsu.cs160l.university.exceptions.ClassFullException;
 import edu.sdsu.cs160l.university.exceptions.NoSuchCourseException;
 import edu.sdsu.cs160l.university.exceptions.StudentAlreadyEnrolledException;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Thoughts, does a university have a single registrar office or multiple?
+ * Registrar now has to implement checks to avoid adding any student to any course.
  */
 public class Registrar {
     private static Registrar REGISTRAR;
@@ -25,8 +25,8 @@ public class Registrar {
         courseList.put("CS340", CourseFactory.getCourse("CS340"));
     }
 
-    public static Registrar getInstance(){
-        if(REGISTRAR==null){
+    public static Registrar getInstance() {
+        if (REGISTRAR == null) {
             REGISTRAR = new Registrar();
         }
         return REGISTRAR;
@@ -41,10 +41,9 @@ public class Registrar {
         course.addStudent(student);
     }
 
-    public boolean isStudentValid(Student student, StudentStrategy studentStrategy){
-       return studentStrategy.isValid(student);
-    }
-
+    /**
+     * Note this is a private function and can only be accessed in registrar class.
+     */
     private boolean isNotValidCourse(String courseName) {
         return !courseList.containsKey(courseName);
     }

@@ -8,6 +8,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Course is now converted to an abstract class so that each course can track students enrolled in that course.
+ * Each course should now limit the no of enrollments (3 in this case)
+ */
 public abstract class Course {
     private Set<Student> studentToBeEnrolled;
     private final static Integer CLASS_SIZE = 3;
@@ -38,6 +42,8 @@ public abstract class Course {
     }
 
     public abstract String courseName();
+
     public abstract List<String> courseDescription();
+
     public abstract Set<String> prerequisites();
 }
