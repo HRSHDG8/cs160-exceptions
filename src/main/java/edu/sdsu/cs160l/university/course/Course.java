@@ -13,11 +13,11 @@ import java.util.Set;
  * Each course should now limit the no of enrollments (3 in this case)
  */
 public abstract class Course {
-    private final Set<Student> studentToBeEnrolled;
+    private final Set<Student> studentsEnrolled;
     private final static Integer CLASS_SIZE = 3;
 
     public Course() {
-        this.studentToBeEnrolled = new HashSet<>();
+        this.studentsEnrolled = new HashSet<>();
     }
 
     public void addStudent(Student studentToBeEnrolled) throws StudentAlreadyEnrolledException, ClassFullException {
@@ -34,11 +34,11 @@ public abstract class Course {
     }
 
     private boolean studentAlreadyPresent(Student student) {
-        return studentToBeEnrolled.contains(student);
+        return studentsEnrolled.contains(student);
     }
 
     private boolean isClassFull() {
-        return studentToBeEnrolled.size() >= CLASS_SIZE;
+        return studentsEnrolled.size() >= CLASS_SIZE;
     }
 
     public abstract String courseName();
